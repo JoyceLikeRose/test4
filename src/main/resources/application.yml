@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /dsDemo
+spring:
+  datasource:
+    sql-trace: true
+    sql-show: true
+    sql-trace-max-size: 100
+    sql-exec-slow-time: 1
+    sql-trace-timeout: 60000
+    sql-trace-timeout-scan-period: 6000
+    sql-exec-alert-action: cn.beecp.starter.demo.TestAlert
+    username: root
+    password: ''
+    jdbcUrl: jdbc:mysql://localhost:3306/test?autoReconnect=true&failOverReadOnly=false
+    initialSize: 10
+    type: cn.beecp.BeeDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    connectProperties: socketTimeout=6000&connectTimeout=6000
